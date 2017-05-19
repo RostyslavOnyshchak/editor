@@ -342,25 +342,3 @@ getId('submitPassword').onclick = function() {
 }
 
 console.timeEnd('1');
-
-
-/*
-console.time('2');
-
-getId('ul').className = 'hide'
-
-console.timeEnd('2');
-
-console.time('3');
-
-getId('ul').style.display = 'none'
-
-console.timeEnd('3');
-
-console.time('4');
-
-getId('ul').setAttribute('style', 'display: none')
-
-console.timeEnd('4');
-
-*/
