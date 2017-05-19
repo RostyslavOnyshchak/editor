@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    
+    <div class="main">
+        <div class="top_window">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptates soluta repellat tempore veritatis. Nemo ducimus obcaecati, dolores placeat, corporis ullam delectus, eveniet quas quibusdam, laboriosam natus autem voluptatibus mollitia repellendus! Itaque optio cupiditate modi saepe culpa amet velit, non, expedita id unde. Quae nulla, qui mollitia dicta facere sint.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptates soluta repellat tempore veritatis. Nemo ducimus obcaecati, dolores placeat, corporis ullam delectus, eveniet quas quibusdam, laboriosam natus autem voluptatibus mollitia repellendus! Itaque optio cupiditate modi saepe culpa amet velit, non, expedita id unde. Quae nulla, qui mollitia dicta facere sint.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptates soluta repellat tempore veritatis. Nemo ducimus obcaecati, dolores placeat, corporis ullam delectus, eveniet quas quibusdam, laboriosam natus autem voluptatibus mollitia repellendus! Itaque optio cupiditate modi saepe culpa amet velit, non, expedita id unde. Quae nulla, qui mollitia dicta facere sint.
+            </p>
+        </div>
+        <div class="control_panel">
+            <form action="#">
+                <input type="button" value="Edit" id="edit">
+                <input type="button" value="block" id="block">
+                <input type="button" value="Style" id="style">
+            </form>
+        </div>
+        <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <p>Please, input the password:</p>
+                        <br>
+                        <form action="#" id="passwordForm">
+                            <label> <input type="text" name="passwordInput" id="passwordInput">
+                            <br>
+                            <span id="alertMessagePassword">The password is incorrect</span>
+                            </label>
+                            <br><br>
+                            <input type="button" id="submitPassword" value="Submit">
+                        </form>
+                    </div>
+                </div>
+        <div class="editor_box">
+            <div class="edit">
+                <form action="#">
+                    <textarea id="text_editor" cols="30" rows="10"></textarea>
+                    <input type="button" value="Save" id="save">
+                    <input type="button" value="Add" id="add">
+                </form>
+            </div>
+            <div class="style">
+                <form action="#" name="styleForm" id="stylesSettingForm">
+                    <span>Text size:</span>
+                    <label>
+                        <input type="radio" name="textSize" value="12px" checked>12px
+                    </label>
+                    <label>
+                        <input type="radio" name="textSize" value="14px">14px
+                    </label>
+                    <label>
+                        <input type="radio" name="textSize" value="16px">16px
+                    </label>
+                    <label>
+                        <input type="radio" name="textSize" value="18px">18px
+                    </label>
+                    <label>
+                        <input type="radio" name="textSize" value="20px">20px
+                    </label>
+                    <br>
+                        <span>Font Family:</span>
+                    <select name="fontsList" id="fontsList">
+                        <option value="Verdana">Verdana</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                    <br>
+                    <div class="stylesFormAlign">
+                        <button type="button" name="btnColor" id="btnColor">Color</button>
+                        <button type="button" name="btnBgColor" id="btnBgColor" >BgColor</button>
+                        <br>
+                        <label>
+                            <input type="checkbox" name="boldText" value="Bold"> Bold text
+                        </label>
+                        <label>
+                            <input type="checkbox" name="italicText" value="Italic"> Italic text
+                        </label>
+                    </div>
+                    <div class="stylesFormAlign">
+                        <table id="colorsTable">
+                            <tr><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td></tr>
+                        </table>
+                    </div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="add_element">
+            
+            <h3>Choose what to add:</h3>
+            <br>
+            <form action="#" id="selectElementToAdd">
+                <label>
+                    <input type="radio" name="elementToAdd" id='table' checked>Table
+                </label>
+                <label>
+                    <input type="radio" name="elementToAdd" id='list'>List
+                </label>
+            </form>
+            <br><br>
+            <div class="addTable">
+                <form action="#" id="addTableForm">   
+                    <label id="rowsLabel">
+                        Input count of row: <input type="text" name="amountOfRows">
+                        <span id="alertMessageRows">Please, input number between 0 and 30</span>
+                    </label>
+                    <br>
+                    <label>
+                        Input count of cell: <input type="text" name="amountOfCells">
+                        <span id="alertMessageCells">Please, input number between 0 and 50</span>
+                    </label>
+                    <br><br><br>
+                    <p><strong>Table cycle</strong></p>
+                    <br>
+                    <label>
+                        Input width of cell: <input type="text" name="widthOfCell">
+                        <span id="alertMessageCellWidth">Please, input number more than 0</span>
+                    </label>
+                    <br>
+                    <label>
+                        Input height of cell: <input type="text" name="heightOfCell">
+                        <span id="alertMessageCellHeight">Please, input number more than 0</span>
+                    </label>
+                    <br>
+                    <label>
+                        Border width: <input type="text" name="borderWidth">
+                    </label>
+                    <label>
+                        Border type:
+                        <select name="borderType">
+                            <option value="solid">solid</option>
+                            <option value="dashed">dashed</option>
+                            <option value="dotted">dotted</option>
+                            <option value="double">double</option>
+                            <option value="none">none</option>
+                        </select>
+                    </label>
+                    <label>
+                        Border color:
+                        <select name="borderColor">
+                            <option value="black">black</option>
+                            <option value="green">green</option>
+                            <option value="blue">blue</option>
+                            <option value="brown">brown</option>
+                            <option value="white">white</option>
+                        </select>
+                    </label>
+                    <br>
+                    <span id="alertMessageBorderWidth">Please, input number more than 0</span>
+                    <br><br>
+                    <input type="button" value="Create" id="createTable">
+                    <input type="button" value="Cancel" id="cancelCreateTable">
+                </form>
+            </div>
+            <div class="addList">
+                <form action="" id="addListForm">
+                    <label>
+                        Type of list:
+                        <select name="ulOrOl" id="ulOrOl">
+                            <option value="">---//---</option>
+                            <option value="ul">Unordered list</option>
+                            <option value="ol">Ordered list</option>
+                        </select>
+                    </label>
+                    <br><br>
+                    <label name="ul" id="ul" class="hide">
+                        Type of mark:
+                        <select name="typeOfMarkUl">
+                            <option value='none'>---//---</option>
+                            <option value="circle">circle</option>
+                            <option value="square">square</option>
+                            <option value="disc">disc</option>
+                        </select>
+                    </label>
+                    <label name="ol" id="ol">
+                        Type of mark:
+                        <select name="typeOfMarkOl">
+                            <option value='none'>---//---</option>
+                            <option value="armenian">armenian</option>
+                            <option value="decimal">decimal</option>
+                            <option value="upper-alpha">upper-alpha</option>
+                            <option value="lower-alpha">lower-alpha</option>
+                            <option value="upper-roman">upper-roman</option>
+                            <option value="lower-roman">lower-roman</option>
+                        </select>
+                    </label>
+                    <br><br>
+                    <div id="amountOfListItems">
+                        <label id="listItemsLabel">Input count of list items:           <input type="text" name="itemsAmount" id="itemsAmount">
+                        </label>
+                        <span id="alertMessageItemsAmount">Please, input number more than 0</span>
+                    </div>
+                    <br><br><br><br>
+                    <input type="button" value="Create" id="createList">
+                    <input type="button" value="Cancel" id="cancelCreateList">
+                 </form>             
+            </div>
+ 
+        </div>
+            
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
